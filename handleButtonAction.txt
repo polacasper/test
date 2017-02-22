@@ -1,0 +1,19 @@
+Stage stage;
+    Parent root;
+    
+    
+    @FXML
+    private void handleButtonAction(ActionEvent event) throws IOException{
+     if(event.getSource()==single){
+        stage=(Stage) single.getScene().getWindow();
+        root = FXMLLoader.load(getClass().getResource("Difficulty.fxml"));
+      }
+     else if(event.getSource()==multi){{
+        stage=(Stage) multi.getScene().getWindow();
+        root = FXMLLoader.load(getClass().getResource("Difficulty.fxml"));
+      }
+     //create a new scene with root and set the stage
+      Scene scene = new Scene(root);
+      stage.setScene(scene);
+      stage.show();
+    }
